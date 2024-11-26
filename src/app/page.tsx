@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 
 import { Calendar, Github, Instagram, Linkedin, Twitter } from 'lucide-react';
-import banner from './banner.jpeg';
+import banner from './banner.png';
 
 import { CustomTabs } from '@/components/custom-tabs';
 import Image from 'next/image';
@@ -48,7 +48,7 @@ export default function Home() {
 					<strong className='underline decoration-[0.5px] underline-offset-[3px]'>
 						React, Node.js
 					</strong>
-					, Spring Boot, and modern cloud technologies.
+					, Spring Boot, and cloud technologies.
 				</p>
 				<Button
 					variant='outline'
