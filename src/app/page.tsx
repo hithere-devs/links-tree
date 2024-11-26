@@ -1,87 +1,81 @@
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { File, Github, Linkedin, Twitter } from 'lucide-react';
-import banner from './banner.jpeg';
-import Image from 'next/image';
+
+import { Calendar, Github, Instagram, Linkedin, Twitter } from 'lucide-react';
+
+import { CustomTabs } from '@/components/custom-tabs';
 
 export default function Home() {
 	return (
-		<div className='min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4'>
-			<div className='w-full max-w-2xl bg-white shadow-lg overflow-hidden'>
-				<Image src={banner} alt='Banner' className='w-full h-48 object-cover' />
-				<div className='p-6'>
-					<CardContent className='flex flex-col items-center'>
-						<div className='flex gap-4 items-center justify-center mb-5'>
-							<Avatar className='mb-2'>
-								<AvatarImage src='/path/to/your/avatar.jpg' alt='Your Name' />
-								<AvatarFallback>AM</AvatarFallback>
-							</Avatar>
-							<h1 className='text-3xl font-serif text-center mb-2'>
-								hi there devs!
-							</h1>
-						</div>
-						<p className='text-center mb-6'>
-							I am a fullstack developer, majorly focusing on backend
-							development.
-						</p>
-						<Separator className='mb-6' />
-						<div className='w-full flex flex-col gap-4'>
-							<div className='grid md:grid-cols-4 grid-cols-2 gap-4 w-full'>
-								<Link href='https://github.com/yourusername' passHref>
-									<Button className='w-full h-[100px]'>
-										<Github />
-									</Button>
-								</Link>
-								<Link href='https://linkedin.com/in/yourusername' passHref>
-									<Button className='w-full h-[100px]'>
-										<Linkedin />
-									</Button>
-								</Link>
-								<Link href='https://x.com/yourusername' passHref>
-									<Button className='w-full h-[100px]'>
-										<Twitter />
-									</Button>
-								</Link>
-								<Link href='/resume.pdf' passHref>
-									<Button className='w-full h-[100px]'>
-										<File />
-									</Button>
-								</Link>
-							</div>
-							<div className='grid md:grid-cols-2 gap-4 w-full'>
-								<Link href='https://github.com/yourusername' passHref>
-									<div className='w-full h-[120px] flex items-center justify-center rounded-md font-serif relative overflow-hidden bg-black'>
-										<Image
-											src={banner}
-											alt='Background'
-											className='absolute object-cover w-full h-full opacity-30'
-										/>
-										<span className='z-10 text-white font-bold'>
-											HITHERE MAIL
-										</span>
-									</div>
-								</Link>
-								<Link href='https://github.com/yourusername' passHref>
-									<div className='w-full h-[120px] flex items-center justify-center rounded-md font-serif relative overflow-hidden bg-black'>
-										<Image
-											src={banner}
-											alt='Background'
-											className='absolute object-cover w-full h-full opacity-30'
-										/>
-										<span className='z-10 text-white font-bold'>TWEET BOT</span>
-									</div>
-								</Link>
-							</div>
-						</div>
-					</CardContent>
+		<div className='flex flex-col items-center justify-center'>
+			<div className='text-left w-full px-5 text-white py-2 flex items-center justify-between select-none mb-16'>
+				<p className='italic'>hit here devs</p>
+				<div className='flex gap-4'>
+					<Twitter size={15} />
+					<Github size={15} />
+					<Linkedin size={15} />
+					<Instagram size={15} />
 				</div>
-				{/* <footer className='p-4 bg-gray-200 text-center'>
-					<p className='text-sm'>© 2024 Azhar. All rights reserved.</p>
-				</footer> */}
 			</div>
+
+			{/* <div className='relative w-full h-[25vh]'>
+				<Image
+					src={banner}
+					alt='Banner'
+					fill
+					className='object-cover'
+					priority
+				/>
+				<div className='absolute inset-0 bg-black bg-opacity-50' />
+			</div> */}
+			{/* <div className='flex flex-col items-left w-full max-w-3xl px-7 select-none'>
+				<span className='text-[4rem] -mt-14 z-50'>👨🏻‍💻</span>
+			</div> */}
+			<div className='bg-gray-900 text-white flex flex-col items-left justify-center p-8 text-left w-full max-w-3xl'>
+				<h1 className='text-4xl font-extrabold mb-14'>hi there devs! 👋👨🏻‍💻</h1>
+				<p>
+					I&apos;m{' '}
+					<strong className='underline decoration-[0.5px] underline-offset-[3px]'>
+						Azhar
+					</strong>{' '}
+					<strong>Mahmood</strong>, a{' '}
+					<strong className='underline decoration-[0.5px] underline-offset-[3px]'>
+						Full Stack Developer
+					</strong>{' '}
+					and <strong>DevOps Engineer</strong> with expertise in building
+					scalable applications. I specialize in{' '}
+					<strong className='underline decoration-[0.5px] underline-offset-[3px]'>
+						React, Node.js
+					</strong>
+					, Spring Boot, and modern cloud technologies.
+				</p>
+				<Button
+					variant='outline'
+					className='aspect-square max-sm:p-0 bg-gray-900 w-32 mt-10 border-[0.2px] border-gray-700 hover:bg-gray-800 hover:text-white select-none'
+				>
+					<Calendar
+						className='opacity-60 sm:-ms-1 sm:me-2 mb-[1px]'
+						size={16}
+						strokeWidth={2}
+						aria-hidden='true'
+					/>
+					<span className='max-sm:sr-only'>Book a call</span>
+				</Button>
+				<div className='h-10' />
+				<CustomTabs variant='projects' />
+				<div className='h-10' />
+				<CustomTabs variant='skills' />
+			</div>
+			<footer className='text-left w-full px-10 text-white py-8 flex items-center justify-evenly select-none mt-16 flex-wrap'>
+				<div className='flex gap-4 my-3'>
+					<Twitter size={15} />
+					<Github size={15} />
+					<Linkedin size={15} />
+					<Instagram size={15} />
+				</div>
+				<p className='italic my-3'>
+					&copy; {new Date().getFullYear()} hitheredevs by Azhar
+				</p>
+			</footer>
 		</div>
 	);
 }
