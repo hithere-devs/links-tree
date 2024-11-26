@@ -1,13 +1,15 @@
 import { Button } from '@/components/ui/button';
 
 import { Calendar, Github, Instagram, Linkedin, Twitter } from 'lucide-react';
+import banner from './banner.jpeg';
 
 import { CustomTabs } from '@/components/custom-tabs';
+import Image from 'next/image';
 
 export default function Home() {
 	return (
 		<div className='flex flex-col items-center justify-center'>
-			<div className='text-left w-full px-5 text-white py-2 flex items-center justify-between select-none mb-16'>
+			<div className='text-left w-full px-5 text-white py-2 flex items-center justify-between select-none'>
 				<p className='italic'>hit here devs</p>
 				<div className='flex gap-4'>
 					<Twitter size={15} />
@@ -17,7 +19,7 @@ export default function Home() {
 				</div>
 			</div>
 
-			{/* <div className='relative w-full h-[25vh]'>
+			<div className='relative w-full h-[25vh]'>
 				<Image
 					src={banner}
 					alt='Banner'
@@ -26,10 +28,10 @@ export default function Home() {
 					priority
 				/>
 				<div className='absolute inset-0 bg-black bg-opacity-50' />
-			</div> */}
-			{/* <div className='flex flex-col items-left w-full max-w-3xl px-7 select-none'>
+			</div>
+			<div className='flex flex-col items-left w-full max-w-3xl px-7 select-none'>
 				<span className='text-[4rem] -mt-14 z-50'>👨🏻‍💻</span>
-			</div> */}
+			</div>
 			<div className='bg-gray-900 text-white flex flex-col items-left justify-center p-8 text-left w-full max-w-3xl'>
 				<h1 className='text-4xl font-extrabold mb-14'>hi there devs! 👋👨🏻‍💻</h1>
 				<p>
