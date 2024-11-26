@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button';
 
 import {
+	ArrowRight,
+	ArrowRightSquare,
 	Calendar,
 	File,
 	Github,
@@ -9,12 +11,45 @@ import {
 	Twitter,
 } from 'lucide-react';
 import banner from './banner.png';
+import riLogo from './ri.png';
+import oia from './oia.png';
+import jv from './jv.png';
+import caresy from './caresy.png';
+import sad from './sad.png';
 
 import { CustomTabs } from '@/components/custom-tabs';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
+	const companies = [
+		{
+			name: 'Reachinbox.ai',
+			role: 'Associate Backend Developer',
+			logo: riLogo,
+		},
+		{
+			name: 'Openinapp',
+			role: 'Junior Backend Developer',
+			logo: oia,
+		},
+		{
+			name: 'JarvIoT',
+			role: 'Software Developer Intern (Frontend)',
+			logo: jv,
+		},
+		{
+			name: 'Caresy',
+			role: 'Software Developer Intern (Backend)',
+			logo: caresy,
+		},
+		{
+			name: 'Saddweb',
+			role: 'Freelancing',
+			logo: sad,
+		},
+	];
+
 	return (
 		<div className='flex flex-col items-center justify-center'>
 			<div className='text-left w-full px-5 text-white py-2 flex items-center justify-between select-none'>
@@ -128,7 +163,46 @@ export default function Home() {
 				</div>
 				<div className='h-10' />
 				<CustomTabs variant='projects' />
-				<div className='h-10' />
+				<div className='h-14' />
+				<div>
+					<h1 className='font-bold sm:text-xl text-lg mb-8'>
+						What it's like for me, working at a company! 🏢
+					</h1>
+					<div className='flex flex-col gap-4'>
+						{' '}
+						{companies.map((company, index) => (
+							<Link
+								key={index}
+								href={`/${company.role
+									.split(' ')
+									.join('-')
+									.toLowerCase()}-${company.name
+									.split(' ')
+									.join('-')
+									.toLowerCase()
+									.split('.')
+									.join('-')}`}
+							>
+								<div className='flex hover:opacity-80 group cursor-pointer text-gray-400 items-center'>
+									<Image
+										src={company.logo}
+										alt='Reachinbox Logo'
+										className='w-5 h-5 mr-3 mt-[2px]'
+									/>
+									<p className='underline decoration-[0.5px] underline-offset-[3px] max-sm:w-[30rem]'>
+										{company.role} at {company.name}
+									</p>
+									<ArrowRight
+										size={20}
+										strokeWidth={2}
+										className='ml-1 mt-[2px] -rotate-45 group-hover:rotate-0 transition-transform duration-500 ease-in-out max-sm:ml-2 max-sm:mb-0'
+									/>
+								</div>
+							</Link>
+						))}
+					</div>
+				</div>
+				<div className='h-14' />
 				<CustomTabs variant='skills' />
 			</div>
 			<footer className='text-left w-full px-10 text-white py-8 flex items-center justify-evenly select-none mt-16 flex-wrap'>
