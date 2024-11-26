@@ -501,7 +501,12 @@ export function CustomTabs({ variant, className }: TabsProps) {
 						<TabsContent key={key} value={key}>
 							<div className='grid md:grid-cols-2 gap-4'>
 								{items.map((item, index) => (
-									<Link href={item.link} key={index}>
+									<Link
+										href={item.link}
+										key={index}
+										target='_blank'
+										rel='noopener noreferrer'
+									>
 										<Card className='p-4 bg-gray-900/50 border-gray-800'>
 											<h3 className='text-md font-medium mb-2 text-white'>
 												{item.title}
