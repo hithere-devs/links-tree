@@ -12,6 +12,7 @@ import Caresy from './pages/caresy';
 import Saddweb from './pages/saddweb';
 
 import oiaBanner from './banners/oia-banner.png';
+import Nav from '@/components/nav';
 
 const Page = () => {
 	// render based on the slug
@@ -45,43 +46,7 @@ const Page = () => {
 
 	return (
 		<div className='flex flex-col items-center justify-center'>
-			<div className='text-left w-full px-5 text-white py-2 flex items-center justify-between select-none'>
-				<p className='italic'>hit here devs</p>
-				<div className='flex gap-4'>
-					<Link
-						href={'https://x.com/hithere_devs'}
-						className='hover:opacity-50'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<Twitter size={15} />
-					</Link>
-					<Link
-						href={'https://github.com/hithere-devs'}
-						className='hover:opacity-50'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<Github size={15} />
-					</Link>
-					<Link
-						href={'https://linkedin.com/in/hithere-devs'}
-						target='_blank'
-						rel='noopener noreferrer'
-						className='hover:opacity-50'
-					>
-						<Linkedin size={15} />
-					</Link>
-					<Link
-						href={'https://instagram.com/malik_258'}
-						className='hover:opacity-50'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<Instagram size={15} />
-					</Link>
-				</div>
-			</div>
+			<Nav />
 			{curPage === 'reachinbox' && <Reachinbox icon='🚀' banner={banner} />}
 			{curPage === 'openinapp' && <Openinapp icon='🏋🏻‍♂️' banner={oiaBanner} />}
 			{curPage === 'jarviot' && <Jarviot icon='🎨' banner={banner} />}

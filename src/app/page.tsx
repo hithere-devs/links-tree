@@ -20,6 +20,7 @@ import sad from './sad.png';
 import { CustomTabs } from '@/components/custom-tabs';
 import Image from 'next/image';
 import Link from 'next/link';
+import Nav from '@/components/nav';
 
 export default function Home() {
 	const companies = [
@@ -52,43 +53,8 @@ export default function Home() {
 
 	return (
 		<div className='flex flex-col items-center justify-center'>
-			<div className='text-left w-full px-5 text-white py-2 flex items-center justify-between select-none'>
-				<p className='italic'>hit here devs</p>
-				<div className='flex gap-4'>
-					<Link
-						href={'https://x.com/hithere_devs'}
-						className='hover:opacity-50'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<Twitter size={15} />
-					</Link>
-					<Link
-						href={'https://github.com/hithere-devs'}
-						className='hover:opacity-50'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<Github size={15} />
-					</Link>
-					<Link
-						href={'https://linkedin.com/in/hithere-devs'}
-						target='_blank'
-						rel='noopener noreferrer'
-						className='hover:opacity-50'
-					>
-						<Linkedin size={15} />
-					</Link>
-					<Link
-						href={'https://instagram.com/malik_258'}
-						className='hover:opacity-50'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<Instagram size={15} />
-					</Link>
-				</div>
-			</div>
+			{/* Nav */}
+			<Nav />
 
 			<div className='relative w-full h-[25vh]'>
 				<Image
@@ -104,19 +70,19 @@ export default function Home() {
 				<span className='text-[4rem] -mt-14 z-50'>👨🏻‍💻</span>
 			</div>
 			<div className='bg-gray-900 text-white flex flex-col items-left justify-center p-8 text-left w-full max-w-3xl'>
-				<h1 className='text-4xl font-extrabold mb-14'>hi there devs! 👋👨🏻‍💻</h1>
+				<h1 className='text-4xl font-bold mb-14'>hi there devs! 👋👨🏻‍💻</h1>
 				<p>
 					I&apos;m{' '}
-					<strong className='underline decoration-[0.5px] underline-offset-[3px]'>
+					<strong className='font-medium underline decoration-[0.5px] underline-offset-[3px]'>
 						Azhar
 					</strong>{' '}
-					<strong>Mahmood</strong>, a{' '}
-					<strong className='underline decoration-[0.5px] underline-offset-[3px]'>
+					<strong className='font-medium'>Mahmood</strong>, a{' '}
+					<strong className='font-medium underline decoration-[0.5px] underline-offset-[3px]'>
 						Full Stack Developer
 					</strong>{' '}
-					and <strong>DevOps Engineer</strong> with expertise in building
-					scalable applications. I specialize in{' '}
-					<strong className='underline decoration-[0.5px] underline-offset-[3px]'>
+					and <strong className='font-medium'>DevOps Engineer</strong> with
+					expertise in building scalable applications. I specialize in{' '}
+					<strong className='font-medium underline decoration-[0.5px] underline-offset-[3px]'>
 						React, Node.js
 					</strong>
 					, Spring Boot, and cloud technologies.
@@ -165,7 +131,7 @@ export default function Home() {
 				<CustomTabs variant='projects' />
 				<div className='h-14' />
 				<div>
-					<h1 className='font-bold sm:text-xl text-lg mb-8'>
+					<h1 className='font-medium sm:text-xl text-lg mb-8'>
 						What it's like for me, working at a company! 🏢
 					</h1>
 					<div className='flex flex-col gap-4'>
