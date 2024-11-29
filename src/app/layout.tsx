@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
 // const poppins = Poppins({
@@ -26,7 +25,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<Head>
+			<head>
 				<meta name='twitter:card' content='summary_large_image' />
 				<meta name='twitter:site' content='@hithere_devs' />
 				<meta name='twitter:title' content='Azhar Mahmood' />
@@ -34,8 +33,11 @@ export default function RootLayout({
 					name='twitter:description'
 					content='simply hit here devs! to know or get in touch with me'
 				/>
-				<meta name='twitter:image' content='/banner.png' />
-			</Head>
+				<meta
+					name='twitter:image'
+					content='https://res.cloudinary.com/chintukepapa/image/upload/v1732861019/af0q93kahobk0luyir5c.png'
+				/>
+			</head>
 			<body
 				className={`${inter.className} antialiased bg-gray-900 max-w-[1600px] m-auto`}
 			>
