@@ -1,15 +1,6 @@
-import { BlogHeaderProps, DetailRowProps } from '@/app/[...slug]/pages/types';
-import Image from 'next/image';
+import { BlogHeaderProps } from '@/app/[...slug]/pages/types';
 
-// @ts-ignore
-
-const BlogHeader = ({
-	banner,
-	icon,
-	detailRows,
-	title,
-	video,
-}: BlogHeaderProps) => {
+const BlogHeader = ({ icon, detailRows, title }: BlogHeaderProps) => {
 	return (
 		<>
 			<div className='relative w-full h-[25vh]'>

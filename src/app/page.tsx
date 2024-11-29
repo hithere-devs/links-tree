@@ -2,7 +2,6 @@ import { Button } from '@/components/ui/button';
 
 import {
 	ArrowRight,
-	ArrowRightSquare,
 	Calendar,
 	File,
 	Github,
@@ -132,7 +131,7 @@ export default function Home() {
 				<div className='h-14' />
 				<div>
 					<h1 className='font-medium sm:text-xl text-lg mb-8'>
-						What it's like for me, working at a company! 🏢
+						What it&apos;s like for me, working at a company! 🏢
 					</h1>
 					<div className='flex flex-col gap-4'>
 						{' '}

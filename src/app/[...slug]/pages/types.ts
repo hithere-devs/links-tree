@@ -6,11 +6,10 @@ export type PageProps = {
 };
 
 export type BlogHeaderProps = {
-	banner: StaticImageData;
+	banner?: StaticImageData;
 	icon: string;
 	title: string;
 	detailRows: DetailRowProps[];
-	video?: string;
 };
 
 export type DetailRowProps = {
