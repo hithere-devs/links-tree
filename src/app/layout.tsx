@@ -26,17 +26,32 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<head>
-				<meta name='twitter:card' content='summary_large_image' />
-				<meta name='twitter:site' content='@hithere_devs' />
-				<meta name='twitter:title' content='Azhar Mahmood' />
-				<meta
-					name='twitter:description'
-					content='simply hit here devs! to know or get in touch with me'
-				/>
-				<meta
-					name='twitter:image'
-					content='https://res.cloudinary.com/chintukepapa/image/upload/v1732861019/af0q93kahobk0luyir5c.png'
-				/>
+				<head>
+					<meta property='og:url' content='https://hitheredevs.com/' />
+					<meta property='og:type' content='website' />
+					<meta property='og:title' content='Azhar Mahmood' />
+					<meta
+						property='og:description'
+						content='full stack developer, simply hit here devs! to know or get in touch with me'
+					/>
+					<meta
+						property='og:image'
+						content='https://res.cloudinary.com/chintukepapa/image/upload/v1732861019/af0q93kahobk0luyir5c.png'
+					/>
+
+					<meta name='twitter:card' content='summary_large_image' />
+					<meta property='twitter:domain' content='hitheredevs.com' />
+					<meta property='twitter:url' content='https://hitheredevs.com/' />
+					<meta name='twitter:title' content='Azhar Mahmood' />
+					<meta
+						name='twitter:description'
+						content='full stack developer, simply hit here devs! to know or get in touch with me'
+					/>
+					<meta
+						name='twitter:image'
+						content='https://res.cloudinary.com/chintukepapa/image/upload/v1732861019/af0q93kahobk0luyir5c.png'
+					/>
+				</head>
 			</head>
 			<body
 				className={`${inter.className} antialiased bg-gray-900 max-w-[1600px] m-auto`}
