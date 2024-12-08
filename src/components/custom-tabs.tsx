@@ -28,10 +28,10 @@ const projectsData = {
 			tag: 'Consultation',
 		},
 		{
-			title: 'Tweet Bot',
+			title: 'Doc Assist',
 			description:
-				'A tool to automate tweets about your progress on github, leetcode & other platforms.',
-			link: 'https://tweet-bot.ayanmn18.live',
+				'App to convert your documents into an interactive chat with AI magic',
+			link: 'https://doc-assist.hitheredevs.com',
 			tag: 'Design',
 		},
 	],
@@ -63,6 +63,13 @@ const projectsData = {
 				'A react native app to search for movies and tv shows, and get details using IMDB APIs.',
 			link: 'https://github.com/hithere-devs/movieapp',
 			tag: 'Development',
+		},
+		{
+			title: 'Tweet Bot',
+			description:
+				'A tool to automate tweets about your progress on github, leetcode & other platforms.',
+			link: 'https://tweet-bot.ayanmn18.live',
+			tag: 'Design',
 		},
 	],
 };
