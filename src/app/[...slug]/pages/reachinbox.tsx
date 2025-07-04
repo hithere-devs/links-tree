@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageProps } from './types';
+import { PageProps } from '@/types';
 import BlogHeader from '@/components/blog-header';
 
 const Reachinbox = ({ banner, icon }: PageProps) => {
