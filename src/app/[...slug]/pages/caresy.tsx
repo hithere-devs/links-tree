@@ -1,6 +1,7 @@
+import { PageProps } from '@/types';
 import Image from 'next/image';
 import React from 'react';
-import { PageProps } from './types';
+
 
 const Caresy = ({ banner, icon }: PageProps) => {
 	return (

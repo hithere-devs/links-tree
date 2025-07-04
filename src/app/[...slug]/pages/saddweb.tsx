@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { PageProps } from './types';
+import { PageProps } from '@/types';
 
 const Saddweb = ({ banner, icon }: PageProps) => {
 	return (

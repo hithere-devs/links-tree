@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageProps } from './types';
+import { PageProps } from '@/types';
 import Image from 'next/image';
 
 const Jarviot = ({ banner, icon }: PageProps) => {

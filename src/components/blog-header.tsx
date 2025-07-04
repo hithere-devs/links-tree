@@ -1,4 +1,5 @@
-import { BlogHeaderProps } from '@/app/[...slug]/pages/types';
+import { BlogHeaderProps } from "@/types";
+
 
 const BlogHeader = ({ icon, detailRows, title }: BlogHeaderProps) => {
 	return (
